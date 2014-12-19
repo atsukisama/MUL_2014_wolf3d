@@ -38,7 +38,6 @@ void	fill_cos(s_move *game)
     }
 }
 
-
 int	init_w(s_win *win)
 {
   if ((win->mlx_ptr = mlx_init()) == NULL)
