@@ -29,6 +29,6 @@ void	level_one(s_lab *map)
   my_strcat(map->lab[14], "111111111111111");
   map->x = 7.5;
   map->y = 7.5;
-  map->k = 0;
+  map->k = 1;
   map->a = 90;
 }
