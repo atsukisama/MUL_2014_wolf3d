@@ -43,7 +43,7 @@ void	draw_wall(s_move *game, int x)
   while (i <= (size * 2))
     {
       y = HEIGHT / 2 - (size - i);
-      my_pixel_img(x, y, &(game->win), 0x000000);
+      my_pixel_img(x, y, &(game->win), 0x222222);
       i = i + 1;
     }
 }
