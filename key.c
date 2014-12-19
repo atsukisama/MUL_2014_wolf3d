@@ -15,8 +15,8 @@ void	up_move(s_move *game)
   float	x;
   float y;
 
-  x = game->map.x + (0.05 * game->c[game->map.a]);
-  y = game->map.y + (0.05 * game->s[game->map.a]);
+  x = game->map.x + (0.1 * game->c[game->map.a]);
+  y = game->map.y + (0.1 * game->s[game->map.a]);
   if (game->map.lab[(int)x][(int)y] != '1')
     {
       game->map.x = x;
@@ -30,8 +30,8 @@ void	down_move(s_move *game)
   float x;
   float y;
 
-  x = game->map.x - (0.05 * game->c[game->map.a]);
-  y = game->map.y - (0.05 * game->s[game->map.a]);
+  x = game->map.x - (0.1 * game->c[game->map.a]);
+  y = game->map.y - (0.1 * game->s[game->map.a]);
   if (game->map.lab[(int)x][(int)y] != '1')
     {
       game->map.x = x;

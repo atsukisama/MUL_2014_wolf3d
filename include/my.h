@@ -34,6 +34,7 @@ void	left_move(s_move *game);
 void	right_move(s_move *game);
 int	key_touch(int key, s_move *game);
 void	level_one(s_lab *map);
+void    level_two(s_lab *map);
 void	fill_sin(s_move *game);
 void	fill_cos(s_move *game);
 int	init_w(s_win *win);

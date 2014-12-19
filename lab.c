@@ -13,7 +13,7 @@
 void	level_one(s_lab *map)
 {
   my_strcat(map->lab[0], "111111111111111");
-  my_strcat(map->lab[1], "100000000000001");
+  my_strcat(map->lab[1], "120000000000001");
   my_strcat(map->lab[2], "101010101010101");
   my_strcat(map->lab[3], "101000101000101");
   my_strcat(map->lab[4], "101010101010101");
@@ -28,7 +28,7 @@ void	level_one(s_lab *map)
   my_strcat(map->lab[13], "100000000000001");
   my_strcat(map->lab[14], "111111111111111");
   map->x = 7.5;
-  map->y = 10.5;
+  map->y = 7.5;
   map->k = 0;
   map->a = 90;
 }
