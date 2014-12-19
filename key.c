@@ -15,8 +15,8 @@ void	up_move(s_move *game)
   float	x;
   float y;
 
-  x = game->map.x + (0.1 * game->c[game->map.a]);
-  y = game->map.y + (0.1 * game->s[game->map.a]);
+  x = game->map.x + (MSPEED * game->c[game->map.a]);
+  y = game->map.y + (MSPEED * game->s[game->map.a]);
   if (game->map.lab[(int)x][(int)y] != '1')
     {
       game->map.x = x;
@@ -30,8 +30,8 @@ void	down_move(s_move *game)
   float x;
   float y;
 
-  x = game->map.x - (0.1 * game->c[game->map.a]);
-  y = game->map.y - (0.1 * game->s[game->map.a]);
+  x = game->map.x - (MSPEED * game->c[game->map.a]);
+  y = game->map.y - (MSPEED * game->s[game->map.a]);
   if (game->map.lab[(int)x][(int)y] != '1')
     {
       game->map.x = x;
@@ -42,13 +42,13 @@ void	down_move(s_move *game)
 
 void	left_move(s_move *game)
 {
-  game->map.a = (game->map.a + 5) % 360;
+  game->map.a = (game->map.a + RSPEED) % 360;
   vision_field(game);
 }
 
 void	right_move(s_move *game)
 {
-  game->map.a = game->map.a - 5;
+  game->map.a = game->map.a - RSPEED;
   if (game->map.a < 0)
     game->map.a = 360 + game->map.a;
   vision_field(game);
