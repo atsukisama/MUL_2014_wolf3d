@@ -8,9 +8,10 @@
 ** Last update Mon Dec 15 20:53:05 2014 Paul Kerebel
 */
 
-#include "my.h"
+#include "include/my.h"
 
 int	expose_c(s_win *win)
 {
   mlx_put_image_to_window(win->mlx_ptr, win->win_ptr, win->d_img.img, 0, 0);
+  return (0);
 }

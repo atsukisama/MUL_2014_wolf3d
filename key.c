@@ -8,7 +8,7 @@
 ** Last update Mon Dec 15 21:09:49 2014 Paul Kerebel
 */
 
-#include "my.h"
+#include "include/my.h"
 
 void	up_move(s_move *game)
 {
@@ -66,4 +66,5 @@ int	key_touch(int key, s_move *game)
   move[3] = &down_move;
   if (KEY(key) >= 0 && KEY(key) <= 3)
     move[KEY(key)](game);
+  return (0);
 }

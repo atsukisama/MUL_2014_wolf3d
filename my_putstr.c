@@ -8,6 +8,8 @@
 ** Last update Mon Oct 20 13:45:00 2014 Paul Kerebel
 */
 
+#include "include/my.h"
+
 void	my_putstr(char *str)
 {
   int	i;

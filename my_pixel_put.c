@@ -8,7 +8,7 @@
 ** Last update Mon Dec 15 21:19:22 2014 Paul Kerebel
 */
 
-#include "my.h"
+#include "include/my.h"
 
 int	my_pixel_img(int x, int y, s_win *win, int color)
 {
@@ -20,4 +20,5 @@ int	my_pixel_img(int x, int y, s_win *win, int color)
   (win->d_img.data)[pix] = color;
   (win->d_img.data)[pix + 1] = color >> 8;
   (win->d_img.data)[pix + 2] = color >> 16;
+  return (0);
 }

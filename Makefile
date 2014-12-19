@@ -24,16 +24,16 @@ OBJ	= $(SRC:.c=.o)
 
 RM	= rm -f
 
-##CFLAGS	+= -Wextra -Wall -Werror
-##CFLAGS	+= -ansi -pedantic
-##CFLAGS	+= -I.
-CFLAGS	+= -lmlx -L./
+CFLAGS	+= -Wextra -Wall -Werror
+CFLAGS	+= -ansi -pedantic
+CFLAGS	+= -I.
+CFLAGS	+= -lmlx -L./minilibx -lm
 CFLAGS	+= -L/usr/lib64 -lmlx_x86_64 -L/usr/lib64/X11 -lXext -lX11
 
 all:	$(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(OBJ) -o $(NAME) $(CFLAGS) -lm
+	gcc $(OBJ) -o $(NAME) $(CFLAGS)
 
 clean:
 	$(RM) $(OBJ)

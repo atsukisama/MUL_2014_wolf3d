@@ -8,6 +8,8 @@
 ** Last update Wed Oct  8 12:06:32 2014 Paul Kerebel
 */
 
+#include "include/my.h"
+
 void	my_putchar(char c)
 {
   write(1, &c, 1);

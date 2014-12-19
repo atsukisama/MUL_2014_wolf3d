@@ -8,7 +8,7 @@
 ** Last update Mon Dec 15 21:20:03 2014 Paul Kerebel
 */
 
-#include "my.h"
+#include "include/my.h"
 
 void	fill_sin(s_move *game)
 {
@@ -18,7 +18,7 @@ void	fill_sin(s_move *game)
   i = 0;
   while (i <= 360)
     {
-      rad = (float)i * (M_PI / 180);
+      rad = (float)i * (PI / 180);
       game->s[i] = sin(rad);
       i = i + 1;
     }
@@ -32,7 +32,7 @@ void	fill_cos(s_move *game)
   i = 0;
   while (i <= 360)
     {
-      rad = (float)i * (M_PI / 180);
+      rad = (float)i * (PI / 180);
       game->c[i] = cos(rad);
       i = i + 1;
     }
@@ -43,7 +43,7 @@ int	init_w(s_win *win)
 {
   if ((win->mlx_ptr = mlx_init()) == NULL)
     {
-      printf("Failed to initialize graphical window!\n");
+      my_putstr("Failed to initialize graphical window!\n");
       return (-1);
     }
   win->w = WIDTH;
@@ -74,4 +74,5 @@ int		main()
   mlx_hook(win.win_ptr, KeyPress, KeyPressMask, key_touch, &game);
   vision_field(&game);
   mlx_loop(win.mlx_ptr);
+  return (0);
 }

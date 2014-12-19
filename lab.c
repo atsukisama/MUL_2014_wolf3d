@@ -8,7 +8,7 @@
 ** Last update Tue Dec 16 17:46:11 2014 kerebe_p
 */
 
-#include "my.h"
+#include "include/my.h"
 
 void	level_one(s_lab *map)
 {

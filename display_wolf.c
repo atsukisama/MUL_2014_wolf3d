@@ -8,7 +8,7 @@
 ** Last update Wed Dec 17 02:39:34 2014 kerebe_p
 */
 
-#include "my.h"
+#include "include/my.h"
 
 void	background(s_win *win)
 {
