@@ -42,7 +42,7 @@ int	init_w(s_win *win)
 {
   if ((win->mlx_ptr = mlx_init()) == NULL)
     {
-      my_putstr("Failed to initialize graphical window!\n");
+      my_putstr("Failed to initialize window!\n");
       return (-1);
     }
   win->w = WIDTH;
