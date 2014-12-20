@@ -83,6 +83,7 @@ void	vision_field(s_move *game)
       draw_wall(game, i);
       i = i + 1;
     }
+  put_map(game);
   mlx_put_image_to_window(game->win.mlx_ptr, game->win.win_ptr,
 			  game->win.d_img.img, 0, 0);
 }
