@@ -24,9 +24,9 @@ OBJ	= $(SRC:.c=.o)
 
 RM	= rm -f
 
-CFLAGS	+= -Wextra -Wall -Werror
-CFLAGS	+= -ansi -pedantic
-CFLAGS	+= -I.
+##CFLAGS	+= -Wextra -Wall -Werror
+##CFLAGS	+= -ansi -pedantic
+##CFLAGS	+= -I.
 CFLAGS	+= -lmlx -L./minilibx -lm
 CFLAGS	+= -L/usr/lib64 -lmlx_x86_64 -L/usr/lib64/X11 -lXext -lX11
 
