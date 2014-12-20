@@ -12,26 +12,50 @@
 
 void	level_one(s_lab *map)
 {
-  my_strcat(map->lab[0], "111111111111111\0");
-  my_strcat(map->lab[1], "120000000000001");
-  my_strcat(map->lab[2], "101010101010101");
-  my_strcat(map->lab[3], "101000101000101");
-  my_strcat(map->lab[4], "101010101010101");
-  my_strcat(map->lab[5], "101000000000101");
-  my_strcat(map->lab[6], "101110000011101");
-  my_strcat(map->lab[7], "100000000000001");
-  my_strcat(map->lab[8], "101110000011101");
-  my_strcat(map->lab[9], "101000000000101");
-  my_strcat(map->lab[10], "101010101010101");
-  my_strcat(map->lab[11], "101000101000101");
-  my_strcat(map->lab[12], "101010101010101");
-  my_strcat(map->lab[13], "100000000000001");
-  my_strcat(map->lab[14], "111111111111111");
+  my_strcpy(map->lab[0], "111111111111111");
+  my_strcpy(map->lab[1], "120000000000001");
+  my_strcpy(map->lab[2], "101010101010101");
+  my_strcpy(map->lab[3], "101000101000101");
+  my_strcpy(map->lab[4], "101010101010101");
+  my_strcpy(map->lab[5], "101000000000101");
+  my_strcpy(map->lab[6], "101110000011101");
+  my_strcpy(map->lab[7], "100000000000001");
+  my_strcpy(map->lab[8], "101110000011101");
+  my_strcpy(map->lab[9], "101000000000101");
+  my_strcpy(map->lab[10], "101010101010101");
+  my_strcpy(map->lab[11], "101000101000101");
+  my_strcpy(map->lab[12], "101010101010101");
+  my_strcpy(map->lab[13], "100000000000001");
+  my_strcpy(map->lab[14], "111111111111111");
   map->x = 7.5;
   map->y = 7.5;
   map->k = 1;
   map->a = 180;
 }
+
+void	level_two(s_lab *map)
+{
+  my_strcpy(map->lab[0], "111111111111111");
+  my_strcpy(map->lab[1], "100000000000001");
+  my_strcpy(map->lab[2], "101011111110101");
+  my_strcpy(map->lab[3], "100000000000001");
+  my_strcpy(map->lab[4], "101110101011101");
+  my_strcpy(map->lab[5], "101000000000101");
+  my_strcpy(map->lab[6], "101110000011101");
+  my_strcpy(map->lab[7], "100010000010001");
+  my_strcpy(map->lab[8], "100011000110001");
+  my_strcpy(map->lab[9], "101001101100101");
+  my_strcpy(map->lab[10], "100000101000001");
+  my_strcpy(map->lab[11], "101000101000101");
+  my_strcpy(map->lab[12], "101010101010101");
+  my_strcpy(map->lab[13], "100000000000001");
+  my_strcpy(map->lab[14], "111111111111111");
+  map->x = 13.5;
+  map->y = 7.5;
+  map->k = 1;
+  map->a = 180;
+}
+
 
 void	square_put(s_win *win, int x, int y, int color)
 {
@@ -39,8 +63,8 @@ void	square_put(s_win *win, int x, int y, int color)
   int	y1;
   int	tmp;
 
-  x1 = x + CSIZE;
-  y1 = y + CSIZE;
+  x1 = x + MSIZE;
+  y1 = y + MSIZE;
   tmp = x;
   while (y < y1)
     {
@@ -70,7 +94,7 @@ void	put_map_line(s_move *game, int y, int y1)
       else
 	square_put(&(game->win), x1, y1, 0xFFFFFF);
       x = x + 1;
-      x1 = x1 + CSIZE;
+      x1 = x1 + MSIZE;
     }
 }
 
@@ -85,6 +109,6 @@ void	put_map(s_move *game)
     {
       put_map_line(game, y, y1);
       y = y + 1;
-      y1 = y1 + CSIZE;
+      y1 = y1 + MSIZE;
     }
 }

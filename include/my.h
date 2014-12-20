@@ -15,7 +15,7 @@
 # define PI 3.14159265359
 # define MSPEED 0.07
 # define RSPEED 3
-# define CSIZE 8
+# define MSIZE 8
 # define KEY(x) (x - 65361)
 
 #include <X11/Xlib.h>
@@ -44,7 +44,7 @@ int	init_w(s_win *win);
 int	my_pixel_img(int x, int y, s_win *win, int color);
 void	my_putchar(char c);
 void	my_putstr(char *str);
-void	my_strcat(char *dest, char *src);
+void	my_strcpy(char *dest, char *src);
 void    square_put(s_win *win, int x, int y, int color);
 void	put_map(s_move *game);
 void    put_map_line(s_move *game, int y, int y1);

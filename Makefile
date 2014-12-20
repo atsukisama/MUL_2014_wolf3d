@@ -12,9 +12,9 @@ SRC	= main.c \
 	  my_pixel_put.c \
 	  expose.c \
 	  lab.c \
-	  my_putstr.c \
 	  my_putchar.c \
-	  my_strcat.c \
+	  my_putstr.c \
+	  my_strcpy.c \
 	  display_wolf.c \
 	  key.c
 

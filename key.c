@@ -23,6 +23,8 @@ void	up_move(s_move *game)
       game->map.y = y;
       vision_field(game);
     }
+  if (game->map.lab[(int)x][(int)y] == '2')
+    level_two(&(game->map));
 }
 
 void	down_move(s_move *game)
@@ -38,6 +40,8 @@ void	down_move(s_move *game)
       game->map.y = y;
       vision_field(game);
     }
+  if (game->map.lab[(int)x][(int)y] == '2')
+    level_two(&(game->map));
 }
 
 void	left_move(s_move *game)
