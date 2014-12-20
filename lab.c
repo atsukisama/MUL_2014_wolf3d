@@ -39,8 +39,8 @@ void	square_put(s_win *win, int x, int y, int color)
   int	y1;
   int	tmp;
 
-  x1 = x + 10;
-  y1 = y + 10;
+  x1 = x + CSIZE;
+  y1 = y + CSIZE;
   tmp = x;
   while (y < y1)
     {
@@ -70,7 +70,7 @@ void	put_map_line(s_move *game, int y, int y1)
       else
 	square_put(&(game->win), x1, y1, 0xFFFFFF);
       x = x + 1;
-      x1 = x1 + 10;
+      x1 = x1 + CSIZE;
     }
 }
 
@@ -85,6 +85,6 @@ void	put_map(s_move *game)
     {
       put_map_line(game, y, y1);
       y = y + 1;
-      y1 = y1 + 10;
+      y1 = y1 + CSIZE;
     }
 }
