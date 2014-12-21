@@ -63,7 +63,10 @@ int	key_touch(int key, s_move *game)
   void  (*move[4])(s_move*);
 
   if (key == 65307)
-    exit(0);
+    {
+      mlx_destroy_window(game->win.mlx_ptr, game->win.win_ptr);
+      exit(0);
+    }
   move[0] = &left_move;
   move[1] = &up_move;
   move[2] = &right_move;

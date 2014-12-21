@@ -58,20 +58,16 @@ int	init_w(s_win *win)
 
 int		main()
 {
-  s_win		win;
-  s_lab		map;
   s_move	game;
 
-  if (init_w(&win) == -1)
+  if (init_w(&(game.win)) == -1)
     return (-1);
-  level_one(&map);
-  game.win = win;
-  game.map = map;
+  level_one(&(game.map));
   fill_sin(&game);
   fill_cos(&game);
-  mlx_expose_hook(win.win_ptr, expose_c, &win);
-  mlx_hook(win.win_ptr, KeyPress, KeyPressMask, key_touch, &game);
+  mlx_expose_hook(game.win.win_ptr, expose_c, &(game.win));
+  mlx_hook(game.win.win_ptr, KeyPress, KeyPressMask, key_touch, &game);
   vision_field(&game);
-  mlx_loop(win.mlx_ptr);
+  mlx_loop(game.win.mlx_ptr);
   return (0);
 }
