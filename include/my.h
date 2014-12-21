@@ -14,7 +14,7 @@
 # define HEIGHT 900
 # define PI 3.14159265359
 # define MSPEED 0.07
-# define RSPEED 3
+# define RSPEED 4
 # define MSIZE 8
 # define KEY(x) (x - 65361)
 

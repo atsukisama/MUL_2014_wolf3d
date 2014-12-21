@@ -38,11 +38,11 @@ void	draw_wall(s_move *game, int x)
   int	i;
   int	y;
 
-  size = (HEIGHT / (2 * game->map.k));
+  size = (HEIGHT / (2 * game->map.k)) * 2;
   i = 0;
-  while (i <= (size * 2))
+  while (i <= size)
     {
-      y = HEIGHT / 2 - (size - i);
+      y = HEIGHT / 2 - (size / 2 - i);
       my_pixel_img(x, y, &(game->win), 0x222222);
       i = i + 1;
     }
