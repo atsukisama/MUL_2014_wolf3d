@@ -56,7 +56,6 @@ void	level_two(s_lab *map)
   map->a = 180;
 }
 
-
 void	square_put(s_win *win, int x, int y, int color)
 {
   int	x1;
