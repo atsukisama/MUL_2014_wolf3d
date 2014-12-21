@@ -49,7 +49,6 @@ int	init_w(s_win *win)
   win->h = HEIGHT;
   win->win_ptr = mlx_new_window(win->mlx_ptr, win->w, win->h,
 				"Wolf3d");
-  if (
   win->d_img.img = mlx_new_image(win->mlx_ptr, win->w, win->h);
   win->d_img.data = mlx_get_data_addr(win->d_img.img, &(win->d_img.bpp),
 				       &(win->d_img.szl),
